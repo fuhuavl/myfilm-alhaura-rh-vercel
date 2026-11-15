@@ -11,6 +11,7 @@ import { User, Plus, ArrowLeft, MessageSquare } from "lucide-react";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { useParams } from "next/navigation";
+import { getImageUrl } from "@/lib/utils";
 
 export default function FilmDetailPage() {
   const params = useParams();
@@ -83,7 +84,7 @@ export default function FilmDetailPage() {
       <div className="absolute top-0 left-0 right-0 h-[50vh] overflow-hidden -z-10">
         {film.images?.[0] && (
           <img
-            src={`https://film-management-api.labse.id/api/static/${film.images[0]}`}
+            src={getImageUrl(film.images[0])}
             alt=""
             className="w-full h-full object-cover opacity-10 blur-xl scale-110"
           />
@@ -109,7 +110,7 @@ export default function FilmDetailPage() {
               {film.images?.[0] ? (
                 
                 <img
-                  src={`https://film-management-api.labse.id/api/static/${film.images[0]}`}
+                  src={getImageUrl(film.images[0])}
                   alt={film.title}
                   className="w-full h-full object-cover"
                 />

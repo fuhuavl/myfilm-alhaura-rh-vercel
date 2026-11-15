@@ -1,0 +1,13 @@
+{
+  "name": "myfilm-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend API pengganti film-management-api untuk frontend Film Management (Next.js)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "reset": "node scripts/reset.js"
+  },
+  "engines": { "node": ">=18" }
+}
